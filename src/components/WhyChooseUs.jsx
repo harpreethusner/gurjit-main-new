@@ -18,9 +18,9 @@ const features = [
         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg>
     ),
-    title: "Expert Team",
+    title: "Single-point responsibility: design + execution",
     description:
-      "Our experienced designers bring years of expertise and creative vision to every project.",
+      "We take complete ownership from concept to final handover, ensuring seamless coordination and accountability throughout your project.",
   },
   {
     number: "02",
@@ -34,12 +34,12 @@ const features = [
         className="w-10 h-10"
         viewBox="0 0 24 24"
       >
-        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
       </svg>
     ),
-    title: "On-Time Delivery",
+    title: "Experienced team & in-house manufacturing support",
     description:
-      "We respect your time and ensure timely completion of all projects without compromising quality.",
+      "Our seasoned professionals, backed by over 20 years of experience and in-house manufacturing capabilities, deliver exceptional quality and craftsmanship.",
   },
   {
     number: "03",
@@ -53,12 +53,12 @@ const features = [
         className="w-10 h-10"
         viewBox="0 0 24 24"
       >
-        <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg>
     ),
-    title: "Affordable Pricing",
+    title: "Transparent costing & structured timelines",
     description:
-      "Quality interior design solutions that fit your budget without hidden costs or surprises.",
+      "Clear, upfront pricing with no hidden costs and well-defined project timelines keep you informed and in control throughout the process.",
   },
   {
     number: "04",
@@ -72,12 +72,12 @@ const features = [
         className="w-10 h-10"
         viewBox="0 0 24 24"
       >
-        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+        <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
       </svg>
     ),
-    title: "Personalized Design",
+    title: "Strong vendor & contractor ecosystem",
     description:
-      "Every space is uniquely crafted to reflect your style, needs, and lifestyle preferences.",
+      "Our established network of trusted vendors and contractors ensures reliable sourcing, competitive pricing, and consistent quality delivery.",
   },
   {
     number: "05",
@@ -94,28 +94,9 @@ const features = [
         <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
       </svg>
     ),
-    title: "Quality Assurance",
+    title: "Hands-on leadership & quality control",
     description:
-      "We use premium materials and maintain the highest standards in every aspect of our work.",
-  },
-  {
-    number: "06",
-    icon: (
-      <svg
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        className="w-10 h-10"
-        viewBox="0 0 24 24"
-      >
-        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-      </svg>
-    ),
-    title: "End-to-End Service",
-    description:
-      "From concept to completion, we handle everything ensuring a seamless experience for you.",
+      "Direct involvement from leadership ensures meticulous attention to detail, rigorous quality checks, and uncompromising standards at every stage.",
   },
 ];
 
@@ -125,6 +106,15 @@ const cardVariant = {
     opacity: 1,
     scale: 1,
     transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+const fadeInUp = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -151,8 +141,8 @@ const WhyChooseUs = () => {
           className="text-center"
         >
           <SectionTitle
-            subtitle={"Our Advantages"}
-            title={"Why Choose Us"}
+            subtitle={""}
+            title={"What Sets Us Apart"}
           />
         </motion.div>
 
@@ -200,6 +190,17 @@ const WhyChooseUs = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Closing Statement */}
+        <motion.p
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center text-xl md:text-2xl font-Urbanist text-gray-800 font-medium italic max-w-3xl mx-auto pt-8"
+        >
+          We don&apos;t just design interiors — we build them responsibly.
+        </motion.p>
       </div>
     </section>
   );

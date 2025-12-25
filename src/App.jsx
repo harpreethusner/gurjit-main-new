@@ -12,6 +12,7 @@ import Portfolio1 from "./components/Portfolio1";
 import BlogDetails from "./components/BlogDetails";
 import MakeAppoinment from "./components/MakeAppoinment";
 import ServicesPage from "./pages/ServicesPage";
+import FAQPage from "./pages/FAQPage";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
   { path: "/blog/:id", element: <BlogDetails /> },
   { path: "/MakeAppoinment", element: <MakeAppoinment /> },
   { path: "/services", element: <ServicesPage /> },
+  { path: "/faq", element: <FAQPage /> },
 ]);
 
 function App() {

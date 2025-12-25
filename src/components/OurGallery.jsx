@@ -185,7 +185,7 @@ const OurGallery = () => {
                   </div>
 
                   {/* Info Section */}
-                  <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-md p-5 translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-md p-5">
                     <h3
                       className={`text-xl font-semibold text-white transform transition-all duration-500 ease-in-out ${
                         clickedIndex === index ? "scale-105 text-[#F1C27D]" : ""

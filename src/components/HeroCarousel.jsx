@@ -21,6 +21,7 @@ export default function HeroCarousel() {
   const carouselRef = useRef();
   const [activeSlide, setActiveSlide] = useState(0);
   const [highlightedCarousel, setHighlightedCarousel] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const settings = {
     autoplay: true,
@@ -39,42 +40,49 @@ export default function HeroCarousel() {
   // };
 
   async function getHighlighted() {
-    const res = await axios.post(apiUrl + endpoint.postportfolio, {
-      categoryId: "0",
-    });
-    if (res.data?.lstData) {
-      const highlighted = res.data.lstData.filter((item) => {
-        if (item.isHighLighted === true) {
-          return item;
-        }
+    try {
+      setIsLoading(true);
+      const res = await axios.post(apiUrl + endpoint.postportfolio, {
+        categoryId: "0",
       });
-      const Highlated = highlighted.map((item) => {
-        const imageCarousel = {
-          bg: "",
-          heading: "",
-          title: "",
-          subtitle: "",
-          ...item,
-        };
-        console.log(imageCarousel);
-        return imageCarousel;
-      });
-      setHighlightedCarousel(Highlated);
+      if (res.data?.lstData) {
+        const highlighted = res.data.lstData.filter((item) => {
+          if (item.isHighLighted === true) {
+            return item;
+          }
+        });
+        const Highlated = highlighted.map((item) => {
+          const imageCarousel = {
+            bg: "",
+            heading: "",
+            title: "",
+            subtitle: "",
+            ...item,
+          };
+          console.log(imageCarousel);
+          return imageCarousel;
+        });
+        setHighlightedCarousel(Highlated);
 
-      const tempCarousel = [];
-      // highlighted.forEach((item) => {
-      //   const currentItem = {
-      //     bg: "",
-      //     heading: "",
-      //     title: "",
-      //     subtitle: "",
-      //   };
-      // });
-      console.log("Original Array", res.data.lstData);
-      console.log("highlighted data:", highlighted);
-      console.log("Highlated", Highlated);
+        const tempCarousel = [];
+        // highlighted.forEach((item) => {
+        //   const currentItem = {
+        //     bg: "",
+        //     heading: "",
+        //     title: "",
+        //     subtitle: "",
+        //   };
+        // });
+        console.log("Original Array", res.data.lstData);
+        console.log("highlighted data:", highlighted);
+        console.log("Highlated", Highlated);
 
-      // setHighlightedCarousel(highlighted);
+        // setHighlightedCarousel(highlighted);
+      }
+    } catch (error) {
+      console.error("Error fetching carousel data:", error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -115,9 +123,19 @@ export default function HeroCarousel() {
   }, []);
   return (
     <section className="relative bg-[#000000a6]">
-      <Carousel ref={carouselRef} {...settings}>
-        {highlightedCarousel.length > 0 &&
-          highlightedCarousel.map((item, index) => (
+      {isLoading ? (
+        <div className="h-screen w-screen flex items-center justify-center bg-[#000000a6]">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <div className="relative w-16 h-16">
+              <div className="absolute top-0 left-0 w-full h-full border-4 border-[#9A7B50] border-t-transparent rounded-full animate-spin"></div>
+            </div>
+            <p className="text-white font-Urbanist text-lg">Loading carousel...</p>
+          </div>
+        </div>
+      ) : (
+        <Carousel ref={carouselRef} {...settings}>
+          {highlightedCarousel.length > 0 &&
+            highlightedCarousel.map((item, index) => (
             <div className="h-screen w-screen">
               <img
                 src={item.images[0].fileImage}
@@ -158,7 +176,7 @@ export default function HeroCarousel() {
                           className="self-start px-2 py-2 md:px-4 md:py-4 text-xs md:text-lg font-semibold text-white outline-1 outline-[#9A7B50] rounded-md hover:bg-[#9A7B50] font-Urbanist hover:text-white"
                           onClick={() => navigate("/contactus")}
                         >
-                          Make An Appoinment
+                          Let's Connect
                         </button>
                       </motion.div>
                     </>
@@ -167,8 +185,10 @@ export default function HeroCarousel() {
               </div>
             </div>
           ))}
-      </Carousel>
-      <div className="absolute bottom-10 right-10 flex flex-col gap-4 z-50">
+        </Carousel>
+      )}
+      {!isLoading && (
+        <div className="absolute bottom-10 right-10 flex flex-col gap-4 z-50">
         <button
           onClick={() => carouselRef.current?.next()}
           className="w-12 h-12 text-white border border-white rounded-md flex items-center justify-center hover:bg-[#9A7B50] hover:border-[#9A7B50]"
@@ -181,7 +201,8 @@ export default function HeroCarousel() {
         >
           <ChevronLeft />
         </button>
-      </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { Button, Modal } from "antd";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const ImageGalleryDialogue = ({ isModalOpen, setIsModalOpen, images }) => {
+const ImageGalleryDialogue = ({ isModalOpen, setIsModalOpen, images, startIndex = 0 }) => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
@@ -21,6 +21,7 @@ const ImageGalleryDialogue = ({ isModalOpen, setIsModalOpen, images }) => {
       >
         <ImageGallery
           items={images}
+          startIndex={startIndex}
           renderItem={(item) => (
             <div className="flex justify-center items-center h-[85svh] w-full">
               <img

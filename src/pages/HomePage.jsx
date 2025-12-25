@@ -1,5 +1,5 @@
 import React from "react";
-import HeroCarousel from "../components/HeroCarousel";
+import HeroCarousel  from "../components/HeroCarousel";
 import Header from "../components/Header/Header";
 import MissionPage from "../components/MissionPage";
 import VisionPage from "../components/VisionPage";
@@ -8,7 +8,6 @@ import OurGallery from "../components/OurGallery";
 import Footer from "../components/Footer";
 import Result from "../components/Result";
 import WhyChooseUs from "../components/WhyChooseUs";
-import FAQs from "../components/FAQs";
 
 
 
@@ -16,14 +15,13 @@ const HomePage = () => {
   return (
     <section className=" overflow-x-hidden overflow-y-auto bg-white ">
       <Header />
-      <HeroCarousel />
+      <HeroCarousel  />
       <MissionPage />
       <VisionPage />
       <OurServices />
       <WhyChooseUs />
       <OurGallery />
       <Result />
-      <FAQs />
       {/* <OurTeam /> */}
       {/* <Contact /> */}
       <Footer />
