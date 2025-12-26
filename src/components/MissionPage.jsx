@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight, Star, Award, Building2, Wrench, MapPin, Target } from "lucide-react";
+import image8 from "../assets/images/image8.jpg";
+import image3 from "../assets/images/image3.jpg";
+import image5 from "../assets/images/image5.jpg";
+import image6 from "../assets/images/image6.jpg";
+import image10 from "../assets/images/image10.jpg";
 // Enhanced Animation Variants
 const imageVariant = {
   hidden: { x: -50, opacity: 0, scale: 0.95 },
@@ -147,7 +151,98 @@ const MissionPage = () => {
           </motion.div>
         </div>
       </section>
+ {/* ========== VERSION 1: Classic Split Layout (Single Row) ========== */}
+     <section className="bg-[#F7F3ED] py-20 md:py-32 px-4 sm:px-8 lg:px-12 w-full">
 
+        <div className="w-full max-w-9xl mx-auto">
+         
+
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+            {/* Left Image */}
+            <motion.div
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className="w-full lg:w-1/4 max-w-md"
+            >
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
+                <img
+                  src={image10}
+                  alt="Team member"
+                  className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+            </motion.div>
+
+            {/* Center Content */}
+            <motion.div
+              variants={textVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className="w-full lg:w-1/3 flex flex-col items-center text-center gap-6 px-3"
+            >
+              <div className="flex items-center justify-center gap-2 mb-0">
+                <span className="block h-[1px] w-12 bg-[#9A7B50]/60" />
+                <div className="h-12 w-12 rounded-full bg-[#1f1a17] text-[#F1C27D] flex items-center justify-center shadow-lg">
+                  <Star className="w-6 h-6" />
+                </div>
+                <span className="block h-[1px] w-12 bg-[#9A7B50]/60" />
+              </div>
+              <h2 className="text-4xl sm:text-5xl md:text-4xl font-bold font-Urbanist text-[#1f1a17]">
+                Who We Are
+              </h2>
+              <div className="w-40 h-1 bg-gradient-to-r from-transparent via-[#9A7B50] to-transparent" />
+               <p className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">
+              We work with a limited number of projects at a time to ensure focus, detailing, and accountability.
+
+</p>
+              <ul className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed mt-1 space-y-2 text-left w-full max-w-md">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
+                  <span>20+ years of professional experience</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
+                  <span>Residential & commercial interior specialists</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
+                  <span>Turnkey execution experts</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
+                  <span>Based in <span className="font-semibold text-[#9A7B50]">Chandigarh / Mohali</span>, working across India</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
+                  <span>We work with a limited number of projects at a time to ensure focus, detailing, and accountability.</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Right Image */}
+            <motion.div
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className="w-full lg:w-1/4 max-w-md"
+            >
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
+                <img
+                  src={image8}
+                  alt="Team member"
+                  className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
 
 
