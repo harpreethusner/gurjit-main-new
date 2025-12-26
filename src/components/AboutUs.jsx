@@ -119,7 +119,7 @@ const AboutUs = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="relative w-full max-w-sm flex flex-col min-h-[450px] group"
+            className="relative w-full max-w-sm flex flex-col min-h-[470px] group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#9A7B50]/20 to-[#9A7B50]/5 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300" />
             <div className="relative w-full h-full bg-center bg-cover bg-[url('assets/images/1.jpg')] rounded-2xl overflow-hidden shadow-xl">
@@ -153,30 +153,33 @@ const AboutUs = () => {
           >
             <motion.div
               variants={fadeInUp}
-              className="inline-block"
+              className="inline-block leading-none"
             >
-              <span className="text-xs tracking-[0.2em] font-Urbanist text-[#9A7B50] uppercase font-semibold relative pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-6 before:bg-[#9A7B50]">
-                Our Philosophy
+              <span className="text-m tracking-[0.2em] font-Urbanist text-[#9A7B50] uppercase font-semibold relative pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-6 before:bg-[#9A7B50]">
+                Gurjot Shan Designs
               </span>
             </motion.div>
-            <div className="flex flex-col gap-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-Urbanist text-gray-900 leading-tight">
-                Good design goes
+            <div className="flex flex-col gap-4">
+              <h2 className="text-4xl md:text-3xl lg:text-5xl font-bold font-Urbanist text-gray-900 leading-tight">
+                Interior Design &
                 <br />
-                <span className="text-[#9A7B50]">beyond how a space looks.</span>
+                <span className="text-[#9A7B50]">Turnkey Execution Studio.</span>
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <p className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">
-                  Good design is not just about how a space looks — it&apos;s about
-                  how well it works, how long it lasts, and how effortlessly it is
-                  delivered. Gurjot Shan Designs was founded with this belief.
+                  Designing spaces with intent. Executing them with precision.
                 </p>
                 <p className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">
-                  Led by Gurjot Shan, the studio brings together creativity,
-                  technical understanding, and execution expertise. Over the
-                  years, we have evolved into a design-build studio, trusted by
-                  clients who value clarity, commitment, and craftsmanship.
+                  At Gurjot Shan Designs, we specialise in end-to-end interior design and turnkey execution, delivering refined, functional, and timeless spaces. With over 20 years of industry experience, we take complete responsibility — from concept to final handover.
+
+
+
+                  Homes. Offices. Commercial environments.
+
+                  Designed thoughtfully. Delivered seamlessly.
                 </p>
+
+
               </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -193,16 +196,12 @@ const AboutUs = () => {
       </section>
 
       {/* Who We Are Section - Three Versions for Comparison */}
-      
+
       {/* ========== VERSION 1: Classic Split Layout (Single Row) ========== */}
-      <section className="bg-white py-20 md:py-32 px-4 sm:px-8 lg:px-16 w-full border-t-4 border-blue-500">
-        <div className="w-full max-w-7xl mx-auto">
-          {/* Version Label */}
-          <div className="mb-8">
-            <span className="inline-block px-4 py-2 bg-blue-500 text-white font-bold font-Urbanist text-sm uppercase tracking-wider rounded">
-              Version 1: Classic Split Layout
-            </span>
-          </div>
+     <section className="bg-[#F7F3ED] py-20 md:py-32 px-4 sm:px-8 lg:px-12 w-full">
+
+        <div className="w-full max-w-9xl mx-auto">
+         
 
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
             {/* Left Image */}
@@ -211,13 +210,13 @@ const AboutUs = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="w-full lg:w-1/3 max-w-md"
+              className="w-full lg:w-1/4 max-w-md"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
                 <img
                   src={image10}
                   alt="Team member"
-                  className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
@@ -229,20 +228,24 @@ const AboutUs = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="w-full lg:w-1/3 flex flex-col items-center text-center gap-6 px-4"
+              className="w-full lg:w-1/3 flex flex-col items-center text-center gap-6 px-3"
             >
-              <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="flex items-center justify-center gap-2 mb-0">
                 <span className="block h-[1px] w-12 bg-[#9A7B50]/60" />
                 <div className="h-12 w-12 rounded-full bg-[#1f1a17] text-[#F1C27D] flex items-center justify-center shadow-lg">
                   <Star className="w-6 h-6" />
                 </div>
                 <span className="block h-[1px] w-12 bg-[#9A7B50]/60" />
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-Urbanist text-[#1f1a17]">
+              <h2 className="text-4xl sm:text-5xl md:text-4xl font-bold font-Urbanist text-[#1f1a17]">
                 Who We Are
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-transparent via-[#9A7B50] to-transparent" />
-              <ul className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed mt-6 space-y-3 text-left w-full max-w-md">
+              <div className="w-40 h-1 bg-gradient-to-r from-transparent via-[#9A7B50] to-transparent" />
+               <p className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">
+              We work with a limited number of projects at a time to ensure focus, detailing, and accountability.
+
+</p>
+              <ul className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed mt-1 space-y-2 text-left w-full max-w-md">
                 <li className="flex items-start gap-3">
                   <span className="text-[#9A7B50] font-bold mt-1">•</span>
                   <span>20+ years of professional experience</span>
@@ -272,13 +275,13 @@ const AboutUs = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="w-full lg:w-1/3 max-w-md"
+              className="w-full lg:w-1/4 max-w-md"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
                 <img
                   src={image8}
                   alt="Team member"
-                  className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
@@ -287,205 +290,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ========== VERSION 2: Vertical Stacked Layout ========== */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-32 px-4 sm:px-8 lg:px-16 w-full border-t-4 border-green-500">
-        <div className="w-full max-w-7xl mx-auto">
-          {/* Version Label */}
-          <div className="mb-8">
-            <span className="inline-block px-4 py-2 bg-green-500 text-white font-bold font-Urbanist text-sm uppercase tracking-wider rounded">
-              Version 2: Vertical Stacked Layout
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-12">
-            {/* Heading at Top */}
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-center w-full"
-            >
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <span className="block h-[1px] w-16 bg-[#9A7B50]/60" />
-                <div className="h-14 w-14 rounded-full bg-[#1f1a17] text-[#F1C27D] flex items-center justify-center shadow-lg">
-                  <Star className="w-7 h-7" />
-                </div>
-                <span className="block h-[1px] w-16 bg-[#9A7B50]/60" />
-              </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-Urbanist text-[#1f1a17] mb-4">
-                Who We Are
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#9A7B50] to-transparent mx-auto" />
-            </motion.div>
-
-            {/* Two Images Side by Side */}
-            <motion.div
-              variants={container}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl"
-            >
-              <motion.div
-                variants={fadeInUp}
-                className="relative overflow-hidden rounded-2xl shadow-2xl group"
-              >
-                <img
-                  src={image3}
-                  alt="Team member"
-                  className="w-full h-[350px] md:h-[400px] object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              </motion.div>
-              <motion.div
-                variants={fadeInUp}
-                className="relative overflow-hidden rounded-2xl shadow-2xl group"
-              >
-                <img
-                  src={image5}
-                  alt="Team member"
-                  className="w-full h-[350px] md:h-[400px] object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              </motion.div>
-            </motion.div>
-
-            {/* Content Below Images */}
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              className="w-full max-w-4xl"
-            >
-              <ul className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span>20+ years of professional experience</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span>Residential & commercial interior specialists</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span>Turnkey execution experts</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span>Based in <span className="font-semibold text-[#9A7B50]">Chandigarh / Mohali</span>, working across India</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span>We work with a limited number of projects at a time to ensure focus, detailing, and accountability.</span>
-                </li>
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== VERSION 3: Full-Width Background Image with Overlay Text ========== */}
-      <section className="relative py-20 md:py-32 px-4 sm:px-8 lg:px-16 w-full border-t-4 border-purple-500 overflow-hidden">
-        {/* Version Label */}
-        <div className="relative z-20 w-full max-w-7xl mx-auto mb-8">
-          <span className="inline-block px-4 py-2 bg-purple-500 text-white font-bold font-Urbanist text-sm uppercase tracking-wider rounded">
-            Version 3: Full-Width Background with Overlay
-          </span>
-        </div>
-
-        {/* Full-Width Background Image */}
-        <div className="absolute inset-0 w-full h-full">
-          <img
-            src={image6}
-            alt="Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-        </div>
-
-        <div className="relative z-10 w-full max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-            {/* Overlay Content Box */}
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              className="w-full lg:w-1/2 bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl"
-            >
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <span className="block h-[1px] w-12 bg-[#9A7B50]/60" />
-                <div className="h-12 w-12 rounded-full bg-[#1f1a17] text-[#F1C27D] flex items-center justify-center shadow-lg">
-                  <Star className="w-6 h-6" />
-                </div>
-                <span className="block h-[1px] w-12 bg-[#9A7B50]/60" />
-              </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-Urbanist text-[#1f1a17] mb-6 text-center">
-                Who We Are
-              </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-transparent via-[#9A7B50] to-transparent mx-auto mb-6" />
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">20+ years of professional experience</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">Residential & commercial interior specialists</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">Turnkey execution experts</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">Based in <span className="font-semibold text-[#9A7B50]">Chandigarh / Mohali</span>, working across India</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A7B50] font-bold mt-1">•</span>
-                  <span className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">We work with a limited number of projects at a time to ensure focus, detailing, and accountability.</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* Two Smaller Images Side by Side */}
-            <motion.div
-              variants={container}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="w-full lg:w-1/2 grid grid-cols-2 gap-4 md:gap-6"
-            >
-              <motion.div
-                variants={fadeInUp}
-                className="relative overflow-hidden rounded-xl shadow-2xl group"
-              >
-                <img
-                  src={image10}
-                  alt="Team member"
-                  className="w-full h-[250px] md:h-[300px] object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </motion.div>
-              <motion.div
-                variants={fadeInUp}
-                className="relative overflow-hidden rounded-xl shadow-2xl group"
-              >
-                <img
-                  src={image8}
-                  alt="Team member"
-                  className="w-full h-[250px] md:h-[300px] object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
+     
       <OurServices />
 
       {/* WhatsApp Floating Icon */}

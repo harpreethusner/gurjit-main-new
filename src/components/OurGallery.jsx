@@ -18,20 +18,20 @@ const OurGallery = () => {
 
   async function getCategory() {
     const res = await axios.get(apiUrl + endpoint.getCategory);
-    if (res.data) {
-      console.log("categorylist", res.data);
-      setCategoryList(res.data.data);
-    }
+
+    const list = res?.data?.data;
+    setCategoryList(Array.isArray(list) ? list : []);
   }
   async function getPortfolio() {
     setIsLoading(true);
+
     const res = await axios.post(apiUrl + endpoint.postportfolio, {
       categoryId: animation,
     });
-    if (res.data) {
-      console.log("portfoliolist", res.data);
-      setPortfolioItems(res.data.lstData);
-    }
+
+    const list = res?.data?.lstData;
+    setPortfolioItems(Array.isArray(list) ? list : []);
+
     setIsLoading(false);
   }
   useEffect(() => {
@@ -65,10 +65,9 @@ const OurGallery = () => {
             key={"All"}
             onClick={() => setAnimation(0)}
             className={`font-Urbanist rounded-full px-4 py-2 transition-all duration-300 ease-in-out transform border border-transparent 
-              ${
-                animation === 0
-                  ? "text-[#F1C27D] bg-white/10 backdrop-blur-sm shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)] scale-105"
-                  : "hover:text-[#F1C27D] hover:border-white/20"
+              ${animation === 0
+                ? "text-[#F1C27D] bg-white/10 backdrop-blur-sm shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)] scale-105"
+                : "hover:text-[#F1C27D] hover:border-white/20"
               }`}
           >
             {"All"}
@@ -78,11 +77,10 @@ const OurGallery = () => {
               key={cat.id}
               onClick={() => setAnimation(cat.id)}
               className={`font-Urbanist rounded-full px-4 py-2 transition-all duration-300 ease-in-out transform border border-transparent 
-              ${
-                animation === cat.id
+              ${animation === cat.id
                   ? "text-[#F1C27D] bg-white/10 backdrop-blur-sm shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)] scale-105"
                   : "hover:text-[#F1C27D] hover:border-white/20"
-              }`}
+                }`}
             >
               {cat.category}
             </button>
@@ -148,9 +146,8 @@ const OurGallery = () => {
                   {/* Info Section */}
                   <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-md p-5">
                     <h3
-                      className={`text-xl font-semibold text-white transform transition-all duration-500 ease-in-out ${
-                        clickedIndex === index ? "scale-105 text-[#F1C27D]" : ""
-                      }`}
+                      className={`text-xl font-semibold text-white transform transition-all duration-500 ease-in-out ${clickedIndex === index ? "scale-105 text-[#F1C27D]" : ""
+                        }`}
                     >
                       {item.title}
                     </h3>
