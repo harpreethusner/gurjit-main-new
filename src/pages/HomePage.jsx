@@ -1,8 +1,9 @@
 import React from "react";
-import HeroCarousel  from "../components/HeroCarousel";
+import HeroCarousel from "../components/HeroCarousel";
 import Header from "../components/Header/Header";
 import MissionPage from "../components/MissionPage";
 import VisionPage from "../components/VisionPage";
+import VideoSection from "../components/VideoSection";
 import OurServices from "../components/OurServices";
 import OurGallery from "../components/OurGallery";
 import Footer from "../components/Footer";
@@ -10,19 +11,18 @@ import Result from "../components/Result";
 import WhyChooseUs from "../components/WhyChooseUs";
 import WhyChoose from "../components/WhyChoose";
 
-
 const HomePage = () => {
   return (
-    <section className=" overflow-x-hidden overflow-y-auto bg-white ">
+    <section className="overflow-x-hidden overflow-y-auto bg-white">
       <Header />
-      <HeroCarousel  />
+      <HeroCarousel />
       <MissionPage />
       <VisionPage />
+      <VideoSection />
       <OurServices />
       <WhyChooseUs />
-     
       <OurGallery />
-       <WhyChoose />
+      <WhyChoose />
       <Result />
       {/* <OurTeam /> */}
       {/* <Contact /> */}
@@ -40,8 +40,8 @@ const HomePage = () => {
         />
       </a>
     </section>
-    // <ImageGallery />
   );
 };
 
 export default HomePage;
+

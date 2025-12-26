@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
@@ -10,36 +10,6 @@ const OurGallery = () => {
   const navigate = useNavigate();
   const [categoryList, setCategoryList] = useState([]);
 
-  // const portfolioItems = [
-  //   {
-  //     type: ["Interior", "Theaters", "Residential"],
-  //     title: "FANTASTIC INTERIOR",
-  //     category: "Interior Design",
-  //     image: image3,
-  //     link: "/ourportfolio/portfolio1",
-  //   },
-  //   {
-  //     type: ["Theaters", "Residential"],
-  //     title: "CHOOSE YOUR DREAM",
-  //     category: "Architecture",
-  //     image: image8,
-  //     link: "/ourportfolio/portfolio2",
-  //   },
-  //   {
-  //     type: ["Residential"],
-  //     title: "LUXURY VILLA",
-  //     category: "Architecture",
-  //     image: image8,
-  //     link: "/ourportfolio/portfolio3",
-  //   },
-  //   {
-  //     type: ["Interior", "Theaters", "Residential"],
-  //     title: "CREATIVE SPACES",
-  //     category: "Interior Design",
-  //     image: image8,
-  //     link: "/ourportfolio/portfolio4",
-  //   },
-  // ];
 
   const [animation, setAnimation] = useState(0);
   const [clickedIndex, setClickedIndex] = useState(null);
@@ -71,35 +41,26 @@ const OurGallery = () => {
     getPortfolio();
   }, [animation]);
 
-  const displayedItems = useMemo(() => {
-    if (!portfolioItems || portfolioItems.length === 0) return [];
-    const shuffled = [...portfolioItems].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 4);
-  }, [portfolioItems]);
-
   return (
-    <div className="bg-[#0f1014] text-white py-14">
-      {/* <div className="h-[60vh] md:h-[70vh] lg:h-[80vh] bg-cover bg-center bg-[url('assets/images/BEST-INTERIOR-DESIGNS-10-.jpg')]">
-        <div className="h-full w-full bg-black/60 flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32">
+    <div className="bg-[#0f1014] text-white">
+      {/* <div className="relative h-[60vh] md:h-[70vh] lg:h-[80vh] bg-cover bg-center bg-[url('assets/images/BEST-INTERIOR-DESIGNS-10-.jpg')]">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
+        <div className="relative h-full w-full flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32">
           <motion.span
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="text-white font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-Urbanist"
+            className="text-white font-semibold tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-Urbanist drop-shadow-xl"
           >
             Our Portfolio
           </motion.span>
         </div>
       </div> */}
-      <section className="pb-4 flex w-full flex-col items-center justify-center gap-6">
-        <SectionTitle
-          subtitle={"Best Works"}
-          title={"Our Portfolio"}
-          needWhite={"true"}
-        />
+      <section className="bg-[#0f1014] text-white pb-4 flex w-full flex-col items-center justify-center gap-6 py-14">
+        <SectionTitle subtitle={"Best Works"} title={"Our Portfolio"} needWhite={'true'} />
 
         {/* Category Buttons */}
-        <div className="flex justify-center flex-wrap w-full gap-3 sm:gap-4 text-sm font-medium text-gray-100 border-t border-b border-white/10 py-4 mb-4 px-4">
+        <div className="flex justify-center flex-wrap w-full gap-3 sm:gap-4 text-sm font-medium text-gray-100 border-t border-b border-white/10 py-4 mb-12 px-4">
           <button
             key={"All"}
             onClick={() => setAnimation(0)}
@@ -130,7 +91,7 @@ const OurGallery = () => {
 
         <motion.div
           layout
-          className="grid md:grid-cols-2 w-full gap-8 mb-12 px-4 sm:px-8"
+          className="grid md:grid-cols-2 w-full gap-8 mb-16 px-4 sm:px-8"
           initial="hidden"
           animate="visible"
           variants={{
@@ -143,12 +104,12 @@ const OurGallery = () => {
         >
           <AnimatePresence mode="wait">
             {isLoading && (
-              <div className="col-span-2 text-center text-gray-400 py-6">
-                Loading highlights...
+              <div className="col-span-2 text-center text-gray-400 py-8">
+                Loading projects...
               </div>
             )}
             {!isLoading &&
-              displayedItems.map((item, index) => (
+              portfolioItems.map((item, index) => (
                 <motion.div
                   key={item.id}
                   layout
@@ -159,25 +120,25 @@ const OurGallery = () => {
                   }}
                   whileInView={{ opacity: 1, x: 0, y: 0 }}
                   viewport={{ once: true }}
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   onClick={() => {
                     setClickedIndex(index);
                     navigate("/ourportfolio/" + animation + "id" + item.id);
                   }}
-                  className="relative group overflow-hidden rounded-xl border border-white/8 bg-white/5 backdrop-blur-sm shadow-[0_25px_50px_-12px_rgba(0,0,0,0.55)] cursor-pointer"
+                  className="relative group overflow-hidden rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6)] cursor-pointer"
                 >
                   {/* Image */}
                   <div className="overflow-hidden">
                     <img
                       src={item.images[0].fileImage}
                       alt={item.title}
-                      className="w-full h-[340px] object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-90"
+                      className="w-full h-[450px] md:h-[500px] lg:h-[550px] object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-90"
                     />
                   </div>
 
                   {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Floating category */}
                   <div className="absolute top-4 left-4 bg-white/15 text-white text-xs uppercase tracking-[0.15em] px-3 py-1 rounded-full border border-white/20 backdrop-blur-sm">

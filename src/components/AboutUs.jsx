@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import image10 from "../assets/images/image10.jpg";
+import image8 from "../assets/images/image8.jpg";
 import OurServices from "./OurServices";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Star, Award, Building2, Wrench, MapPin, Target } from "lucide-react";
 
 const imageVariant = {
   hidden: { x: -100, opacity: 0 },
@@ -189,79 +190,156 @@ const AboutUs = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-20 md:py-28 px-4 sm:px-8 lg:px-16 w-full">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid w-full max-w-7xl grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 mx-auto"
-        >
+      <section className="bg-gradient-to-b from-white via-gray-50 to-white py-20 md:py-32 px-4 sm:px-8 lg:px-16 w-full">
+        <div className="w-full max-w-7xl mx-auto">
+          {/* Section Header */}
           <motion.div
-            variants={textFromLeft}
-            className="relative flex justify-center w-full group"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-center mb-16 md:mb-20"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#9A7B50]/20 to-transparent rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300" />
-            <img
-              src={image10}
-              alt="Interior Design"
-              className="relative transform transition-all duration-500 ease-in-out hover:scale-105 rounded-2xl shadow-2xl z-10 w-full h-auto max-h-[500px] object-cover"
-            />
-          </motion.div>
-          <motion.div
-            variants={textFromRight}
-            className="flex flex-col items-start gap-6 px-4"
-          >
-            <motion.div variants={fadeInUp}>
-              <span className="text-xs tracking-[0.2em] font-Urbanist text-[#9A7B50] uppercase font-semibold relative pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-6 before:bg-[#9A7B50]">
-                About Our Studio
-              </span>
-            </motion.div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 font-Urbanist leading-tight">
-              Who <span className="text-[#9A7B50]">We Are</span>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="block h-[1px] w-16 bg-[#9A7B50]/60" />
+              <div className="h-14 w-14 rounded-full bg-[#1f1a17] text-[#F1C27D] flex items-center justify-center shadow-lg">
+                <Star className="w-7 h-7" />
+              </div>
+              <span className="block h-[1px] w-16 bg-[#9A7B50]/60" />
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-Urbanist text-[#1f1a17] mb-4">
+              Who We Are
             </h2>
-            <ul className="space-y-4 text-base md:text-lg text-gray-700 font-Urbanist">
-              <motion.li
-                variants={fadeInUp}
-                className="flex items-start gap-3"
-              >
-                <CheckCircle2 className="w-6 h-6 text-[#9A7B50] flex-shrink-0 mt-0.5" />
-                <span>20+ years of professional experience</span>
-              </motion.li>
-              <motion.li
-                variants={fadeInUp}
-                className="flex items-start gap-3"
-              >
-                <CheckCircle2 className="w-6 h-6 text-[#9A7B50] flex-shrink-0 mt-0.5" />
-                <span>Residential &amp; commercial interior specialists</span>
-              </motion.li>
-              <motion.li
-                variants={fadeInUp}
-                className="flex items-start gap-3"
-              >
-                <CheckCircle2 className="w-6 h-6 text-[#9A7B50] flex-shrink-0 mt-0.5" />
-                <span>Turnkey execution experts</span>
-              </motion.li>
-              <motion.li
-                variants={fadeInUp}
-                className="flex items-start gap-3"
-              >
-                <CheckCircle2 className="w-6 h-6 text-[#9A7B50] flex-shrink-0 mt-0.5" />
-                <span>Based in Chandigarh / Mohali, working across India</span>
-              </motion.li>
-              <motion.li
-                variants={fadeInUp}
-                className="flex items-start gap-3 pt-2"
-              >
-                <CheckCircle2 className="w-6 h-6 text-[#9A7B50] flex-shrink-0 mt-0.5" />
-                <span className="font-medium">
-                  We work with a limited number of projects at a time to ensure
-                  focus, detailing, and accountability.
-                </span>
-              </motion.li>
-            </ul>
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#9A7B50] to-transparent mx-auto" />
           </motion.div>
-        </motion.div>
+
+          {/* Features Grid */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12"
+          >
+            {/* Feature 1: Years of Experience */}
+            <motion.div
+              variants={fadeInUp}
+              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#9A7B50]/30"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9A7B50]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-[#9A7B50] to-[#8A6B40] text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold font-Urbanist text-[#1f1a17] mb-3">
+                  20+ Years
+                </h3>
+                <p className="text-gray-700 font-Urbanist leading-relaxed">
+                  of professional experience in interior design and execution
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Feature 2: Specialists */}
+            <motion.div
+              variants={fadeInUp}
+              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#9A7B50]/30"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9A7B50]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-[#9A7B50] to-[#8A6B40] text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Building2 className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold font-Urbanist text-[#1f1a17] mb-3">
+                  Specialists
+                </h3>
+                <p className="text-gray-700 font-Urbanist leading-relaxed">
+                  Residential & commercial interior design experts
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Feature 3: Turnkey Experts */}
+            <motion.div
+              variants={fadeInUp}
+              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#9A7B50]/30"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9A7B50]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-[#9A7B50] to-[#8A6B40] text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Wrench className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold font-Urbanist text-[#1f1a17] mb-3">
+                  Turnkey Experts
+                </h3>
+                <p className="text-gray-700 font-Urbanist leading-relaxed">
+                  Complete execution from concept to completion
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Feature 4: Location */}
+            <motion.div
+              variants={fadeInUp}
+              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#9A7B50]/30 md:col-span-2 lg:col-span-1"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9A7B50]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-[#9A7B50] to-[#8A6B40] text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <MapPin className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold font-Urbanist text-[#1f1a17] mb-3">
+                  Our Reach
+                </h3>
+                <p className="text-gray-700 font-Urbanist leading-relaxed">
+                  Based in <span className="font-semibold text-[#9A7B50]">Chandigarh / Mohali</span>, working across India
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Feature 5: Focus & Accountability */}
+            <motion.div
+              variants={fadeInUp}
+              className="group relative bg-gradient-to-br from-[#9A7B50] to-[#8A6B40] rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 md:col-span-2 lg:col-span-2"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl" />
+              <div className="relative flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl bg-white/20 backdrop-blur-sm text-white shadow-lg">
+                    <Target className="w-10 h-10" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold font-Urbanist text-white mb-3">
+                    Focused Excellence
+                  </h3>
+                  <p className="text-white/95 font-Urbanist leading-relaxed text-base md:text-lg">
+                    We work with a limited number of projects at a time to ensure focus, detailing, and accountability. Every project receives our undivided attention and commitment to excellence.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Call to Action */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-center mt-12"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/contactus")}
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#9A7B50] text-white font-Urbanist font-semibold px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-[#8A6B40]"
+            >
+              Get In Touch
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </motion.div>
+        </div>
       </section>
 
       {/* Services */}

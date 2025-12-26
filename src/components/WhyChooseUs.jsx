@@ -98,6 +98,25 @@ const features = [
     description:
       "Direct involvement from leadership ensures meticulous attention to detail, rigorous quality checks, and uncompromising standards at every stage.",
   },
+  {
+    number: "06",
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        className="w-10 h-10"
+        viewBox="0 0 24 24"
+      >
+        <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      </svg>
+    ),
+    title: "Innovative solutions & modern technology",
+    description:
+      "We leverage cutting-edge design tools and innovative approaches to bring your vision to life with efficiency and precision.",
+  },
 ];
 
 const cardVariant = {

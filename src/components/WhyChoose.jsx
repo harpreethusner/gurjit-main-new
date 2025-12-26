@@ -133,7 +133,7 @@ const WhyChoose = () => {
   const isInView = useInView(headingRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="font-Urbanist bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 px-4 sm:px-8 flex items-center justify-center w-full">
+    <section className="font-Urbanist bg-white py-16 md:py-24 px-4 sm:px-8 flex items-center justify-center w-full">
       <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-12">
         {/* Heading */}
         <motion.div
@@ -156,8 +156,8 @@ const WhyChoose = () => {
           />
         </motion.div>
 
-        {/* Features Grid - Horizontal Card Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 w-full">
+        {/* Features Grid - Vertical Card Layout with Different Design */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -165,38 +165,38 @@ const WhyChoose = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="group relative bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden border border-transparent hover:border-[#9A7B50]/20"
+              whileHover={{ y: -12, scale: 1.03 }}
+              className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden border-l-4 border-transparent hover:border-[#9A7B50]"
             >
-              {/* Decorative number in background */}
-              <div className="absolute top-0 right-0 text-8xl md:text-9xl font-bold text-[#9A7B50]/5 leading-none select-none">
-                {feature.number}
-              </div>
+              {/* Top accent bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9A7B50]/0 via-[#9A7B50]/0 to-[#9A7B50]/0 group-hover:from-[#9A7B50] group-hover:via-[#9A7B50]/50 group-hover:to-[#9A7B50] transition-all duration-500"></div>
 
-              {/* Content */}
-              <div className="relative flex items-start gap-6">
-                {/* Icon Container */}
-                <div className="flex-shrink-0 relative">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#9A7B50]/10 to-[#9A7B50]/5 flex items-center justify-center text-[#9A7B50] group-hover:from-[#9A7B50] group-hover:to-[#9A7B50]/80 group-hover:text-white transition-all duration-300 transform group-hover:rotate-6 group-hover:scale-110">
+              {/* Content - Vertical Layout */}
+              <div className="relative flex flex-col items-center text-center gap-4">
+                {/* Icon Container - Centered */}
+                <div className="relative">
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#9A7B50]/20 to-[#9A7B50]/10 flex items-center justify-center text-[#9A7B50] group-hover:from-[#9A7B50] group-hover:to-[#9A7B50]/90 group-hover:text-white transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-12 shadow-lg group-hover:shadow-xl">
                     {feature.icon}
                   </div>
-                  {/* Decorative dot */}
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#9A7B50] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Number badge */}
+                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-[#9A7B50] text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {feature.number}
+                  </div>
                 </div>
 
                 {/* Text Content */}
-                <div className="flex-1 pt-1">
+                <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-bold text-black mb-3 group-hover:text-[#9A7B50] transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+                  <p className="text-gray-600 leading-relaxed text-base">
                     {feature.description}
                   </p>
                 </div>
               </div>
 
-              {/* Bottom accent line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#9A7B50]/0 to-transparent group-hover:via-[#9A7B50] transition-all duration-300"></div>
+              {/* Decorative corner element */}
+              <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-[#9A7B50]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-tl-full"></div>
             </motion.div>
           ))}
         </div>

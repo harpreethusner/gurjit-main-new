@@ -133,7 +133,7 @@ const OurPortfolio = () => {
                     <img
                       src={item.images[0].fileImage}
                       alt={item.title}
-                      className="w-full h-[380px] object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-90"
+                      className="w-full h-[450px] md:h-[500px] lg:h-[550px] object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-90"
                     />
                   </div>
 

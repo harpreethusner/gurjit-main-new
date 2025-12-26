@@ -5,9 +5,8 @@ import { SectionTitle } from "./SectionTitle";
 // Service data
 const services = [
   {
-    title: "Interior Design",
-    desc: "Execution-ready plans: layouts, custom joinery, finishes, lighting, color palettes, and 3D views that stay on budget.",
-    href: "/services#interior-design",
+    title: "INTERIOR DESIGN",
+    desc: "We will design buildings, whether residential, commercial, or institutional. This involves conceptualizing the overall structure, layout, and aesthetics of the building.",
     icon: (
       <svg
         fill="none"
@@ -23,9 +22,8 @@ const services = [
     ),
   },
   {
-    title: "Turnkey Interior Execution",
-    desc: "One team, one contract, one timeline. We manage civil, electrical, plumbing, ceilings, furniture, finishes, and final styling.",
-    href: "/services#turnkey",
+    title: "Turnkey Projects",
+    desc: "In a turnkey interior project, we will take full responsibility for all aspects of the interior design and construction process, from conceptualization to completion.",
     icon: (
       <svg
         fill="none"
@@ -43,9 +41,8 @@ const services = [
     ),
   },
   {
-    title: "Residential Interiors",
-    desc: "Calm, functional homes across apartments, villas, and full renovations—balancing comfort, durability, and budgets.",
-    href: "/services#residential",
+    title: "Online Interior Services",
+    desc: "This online interior design services offer virtual consultations where you can discuss your design preferences, budget, and specific needs with a designer.",
     icon: (
       <svg
         fill="none"
@@ -62,9 +59,8 @@ const services = [
     ),
   },
   {
-    title: "Commercial & Office Interiors",
-    desc: "Workflow-first spaces for offices, studios, clinics, and retail—planned for efficiency, scalability, and brand clarity.",
-    href: "/services#commercial",
+    title: "Custom Solution",
+    desc: "Interior services that are specific to your needs can provide an additional dimension to your space, turning a dull room into one that is a home.",
     icon: (
       <svg
         fill="none"
@@ -157,7 +153,7 @@ const OurServices = () => {
                 </p>
                 <div className="mt-4">
                   <a
-                    href={service.href}
+                    href="#"
                     className="text-sm font-medium text-black group-hover:text-white border-b border-transparent group-hover:border-white transition-all duration-300"
                   >
                     — READ MORE
@@ -185,7 +181,7 @@ const OurServices = () => {
                 </p>
                 <div className="mt-4">
                   <a
-                    href={service.href}
+                    href="#"
                     className="text-sm font-medium text-black group-hover:text-white border-b border-transparent group-hover:border-white transition-all duration-300"
                   >
                     — READ MORE

@@ -135,20 +135,6 @@ const Footer = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-[#bfa377] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               FAQ
             </a>
-             <a
-              href="/services"
-              className="text-gray-400 hover:text-[#bfa377] transition-colors duration-300 text-sm lg:text-base flex items-center gap-2 group"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#bfa377] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Services
-            </a>
-              <a
-              href="/contactus"
-              className="text-gray-400 hover:text-[#bfa377] transition-colors duration-300 text-sm lg:text-base flex items-center gap-2 group"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#bfa377] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              Contect Us
-            </a>
           </div>
         </div>
       </div>
