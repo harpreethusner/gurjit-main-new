@@ -36,29 +36,32 @@ const VideoSection = () => {
       <div className="mx-auto max-w-7xl relative z-10">
         {/* Heading */}
         <div className="mb-12 md:mb-16 w-full text-center md:text-left">
-          <div className="inline-block mb-4">
+          {/* <div className="inline-block mb-4">
             <p className="text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-[#c59a6d] mb-3 relative inline-block">
               <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#c59a6d] opacity-50"></span>
               Our Design Process
               <span className="absolute -right-4 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#c59a6d] opacity-50"></span>
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+          </div> */}
+          <div className="grid md:grid-cols-1 gap-8 md:gap-12 items-start">
             <div className="md:col-span-1">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-Urbanist font-bold leading-tight text-[#1f1a17] mb-6">
-                Transforming Spaces Into{" "}
+              <h2 className="text-4xl md:text-5xl lg:text-4xl font-Urbanist font-bold leading-tight text-[#1f1a17] mb-6">
+                Good design is not just about how a space looks —{" "}
                 <span className="relative inline-block">
                   <span className="text-[#c59a6d]">Beautiful Homes</span>
                   <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#c59a6d]/30 to-transparent"></span>
                 </span>
               </h2>
             </div>
-            <div className="md:col-span-1">
+            {/* <div className="md:col-span-1">
               <p className="mt-0 md:mt-6 text-base md:text-lg text-gray-700 leading-relaxed">
                 Discover how thoughtful design transforms ordinary rooms into extraordinary living spaces. Explore our creative process, premium materials, and expert craftsmanship that bring your dream home to life.
               </p>
-            </div>
+            </div> */}
           </div>
+           <p className="mt-0 md:mt-6 text-base md:text-lg text-gray-700 leading-relaxed">
+                Discover how thoughtful design transforms ordinary rooms into extraordinary living spaces. Explore our creative process, premium materials, and expert craftsmanship that bring your dream home to life.
+              </p>
         </div>
 
         {/* Video Card */}
@@ -67,11 +70,11 @@ const VideoSection = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative rounded-[40px] bg-white shadow-[0_32px_100px_rgba(15,23,42,0.15)] overflow-visible transition-all duration-500 hover:shadow-[0_40px_120px_rgba(15,23,42,0.2)] hover:-translate-y-1">
+          <div className="relative rounded-[20px] bg-white shadow-[0_32px_100px_rgba(15,23,42,0.15)] overflow-visible transition-all duration-500 hover:shadow-[0_40px_120px_rgba(15,23,42,0.2)] hover:-translate-y-1">
             {/* Decorative corner accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c59a6d]/10 to-transparent rounded-bl-full z-0"></div>
             
-            <div className="relative overflow-hidden rounded-[40px]">
+            <div className="relative overflow-hidden rounded-[20px]">
               {/* Video Element */}
               <video
                 ref={videoRef}
