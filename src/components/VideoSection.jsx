@@ -8,7 +8,9 @@ const VideoSection = () => {
 
   // You can replace this with your actual video URL or path
   // For example: "/videos/interior-design-showcase.mp4" or a YouTube embed URL
-  const videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"; // Placeholder - replace with your video
+ // const videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"; 
+    const videoUrl = "https://harpreethusne.bsite.net/images/Portfolio/6.mp4"; 
+  
 
   const handlePlayPause = () => {
     if (videoRef.current) {
