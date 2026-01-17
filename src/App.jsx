@@ -13,10 +13,12 @@ import BlogDetails from "./components/BlogDetails";
 import MakeAppoinment from "./components/MakeAppoinment";
 import ServicesPage from "./pages/ServicesPage";
 import FAQPage from "./pages/FAQPage";
+import LandingPagePage from "./pages/LandingPage";
 
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
+  { path: "/landing", element: <LandingPagePage /> },
   { path: "/interiorservices", element: <InteriorServicesPage /> },
   { path: "/howwework", element: <HowWeWorkPage /> },
   { path: "/projects", element: <ProjectsPage /> },

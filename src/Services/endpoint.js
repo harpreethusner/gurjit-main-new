@@ -4,4 +4,5 @@ export const endpoint = {
   getNews: "Master/GetNews",
   getReview: "Transaction/GetReviews",
   sendContact: "Transaction/ContactUs",
+  addInteriorConsultationLead: "Transaction/AddInteriorConsultationLead",
 };
