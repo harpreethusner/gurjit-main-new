@@ -34,6 +34,12 @@ export default function Header() {
         >
           About
         </a>
+        <a
+          href="/landing"
+          className="font-Urbanist text-base text-white transition-colors duration-300"
+        >
+          Interior Solutions
+        </a>
         <div
           className="relative"
           onMouseEnter={() => setServicesOpen(true)}

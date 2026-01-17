@@ -8,7 +8,9 @@ const VideoSection = () => {
 
   // You can replace this with your actual video URL or path
   // For example: "/videos/interior-design-showcase.mp4" or a YouTube embed URL
-  const videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"; // Placeholder - replace with your video
+ // const videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"; 
+    const videoUrl = "https://harpreethusne.bsite.net/images/Portfolio/6.mp4"; 
+  
 
   const handlePlayPause = () => {
     if (videoRef.current) {
@@ -26,52 +28,66 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-[#f6efe7] via-[#faf7f3] to-[#f6efe7] py-20 md:py-32 px-4 sm:px-8 lg:px-16 overflow-x-hidden">
+    <section className="relative bg-[#F7F3ED] py-10 md:py-16 px-4 sm:px-8 lg:px-16 overflow-x-hidden">
+
+    {/* <section className="relative bg-[#F7F3ED] py-10 md:py-32 px-4 sm:px-8 lg:px-16 overflow-x-hidden"> */}
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#c59a6d]/5 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#c59a6d]/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="mx-auto max-w-7xl relative z-10">
+      <div className="mx-auto max-w-8xl relative z-10">
         {/* Heading */}
         <div className="mb-12 md:mb-16 w-full text-center md:text-left">
-          <div className="inline-block mb-4">
+          {/* <div className="inline-block mb-4">
             <p className="text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-[#c59a6d] mb-3 relative inline-block">
               <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#c59a6d] opacity-50"></span>
               Our Design Process
               <span className="absolute -right-4 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#c59a6d] opacity-50"></span>
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+          </div> */}
+          <div className="grid md:grid-cols-1 gap-8 md:gap-12 items-start">
             <div className="md:col-span-1">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-Urbanist font-bold leading-tight text-[#1f1a17] mb-6">
-                Transforming Spaces Into{" "}
+              <h2 className="text-5xl md:text-5xl lg:text-5xl font-Urbanist font-bold leading-tight text-[#1f1a17] mb-6">
+                A New Chapter in Our {" "}
                 <span className="relative inline-block">
-                  <span className="text-[#c59a6d]">Beautiful Homes</span>
+                  <span className="text-[#c59a6d]">Design Journey</span>
                   <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#c59a6d]/30 to-transparent"></span>
                 </span>
               </h2>
             </div>
-            <div className="md:col-span-1">
+            {/* <div className="md:col-span-1">
               <p className="mt-0 md:mt-6 text-base md:text-lg text-gray-700 leading-relaxed">
                 Discover how thoughtful design transforms ordinary rooms into extraordinary living spaces. Explore our creative process, premium materials, and expert craftsmanship that bring your dream home to life.
               </p>
-            </div>
+            </div> */}
           </div>
+          <p className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">
+            Good design is not just about how a space looks —
+
+            it’s about how well it works, how long it lasts, and how effortlessly it is delivered.
+
+
+
+            Gurjot Shan Designs was founded with this belief.
+
+
+
+            Led by Gurjot Shan, the studio brings together creativity, technical understanding, and execution expertise. Over the years, we have evolved into a design-build studio, trusted by clients who value clarity, commitment, and craftsmanship.     </p>
         </div>
 
         {/* Video Card */}
-        <div 
+        <div
           className="relative group"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative rounded-[40px] bg-white shadow-[0_32px_100px_rgba(15,23,42,0.15)] overflow-visible transition-all duration-500 hover:shadow-[0_40px_120px_rgba(15,23,42,0.2)] hover:-translate-y-1">
+          <div className="relative rounded-[20px] bg-white shadow-[0_32px_100px_rgba(15,23,42,0.15)] overflow-visible transition-all duration-500 hover:shadow-[0_40px_120px_rgba(15,23,42,0.2)] hover:-translate-y-1">
             {/* Decorative corner accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c59a6d]/10 to-transparent rounded-bl-full z-0"></div>
-            
-            <div className="relative overflow-hidden rounded-[40px]">
+
+            <div className="relative overflow-hidden rounded-[20px]">
               {/* Video Element */}
               <video
                 ref={videoRef}
@@ -100,7 +116,7 @@ const VideoSection = () => {
                     <div className="absolute w-32 h-32 rounded-full bg-white/20 animate-ping"></div>
                     <div className="absolute w-28 h-28 rounded-full bg-white/30 animate-pulse"></div>
                   </div>
-                  
+
                   {/* Main play button */}
                   <span className="relative flex h-24 w-24 md:h-28 md:w-28 items-center justify-center rounded-full bg-white/98 shadow-[0_20px_60px_rgba(15,23,42,0.4)] backdrop-blur-md transition-all duration-300 group-hover/play:scale-110 group-hover/play:shadow-[0_25px_70px_rgba(197,154,109,0.4)] active:scale-95">
                     {/* Inner glow */}
@@ -108,7 +124,7 @@ const VideoSection = () => {
                     {/* Play icon */}
                     <span className="relative ml-1.5 inline-block border-l-[22px] md:border-l-[26px] border-l-[#c59a6d] border-y-[12px] md:border-y-[14px] border-y-transparent transition-transform duration-200 group-hover/play:translate-x-1"></span>
                   </span>
-                  
+
                   {/* Play text */}
                   <span className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-sm font-medium tracking-wider uppercase opacity-90">
                     Watch Our Story
@@ -121,9 +137,8 @@ const VideoSection = () => {
                 <button
                   type="button"
                   onClick={handlePlayPause}
-                  className={`absolute inset-0 flex items-center justify-center z-10 cursor-pointer focus:outline-none transition-opacity duration-300 ${
-                    isHovered ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`absolute inset-0 flex items-center justify-center z-10 cursor-pointer focus:outline-none transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
+                    }`}
                   aria-label="Pause video"
                 >
                   <span className="flex h-20 w-20 items-center justify-center rounded-full bg-black/60 backdrop-blur-md transition-all duration-200 hover:bg-black/70 hover:scale-110">
@@ -170,11 +185,11 @@ const VideoSection = () => {
               </svg>
             </div>
             <p className="leading-relaxed pr-4">
-              Our team of experienced interior designers works closely with you to understand your lifestyle, 
+              Our team of experienced interior designers works closely with you to understand your lifestyle,
               preferences, and vision, ensuring every detail reflects your unique personality.
             </p>
           </div>
-          
+
           <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-[#c59a6d]/5 to-[#f1e2cf]/30 border border-[#c59a6d]/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
             <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-[#c59a6d]/20 flex items-center justify-center group-hover:bg-[#c59a6d]/30 transition-colors duration-300">
               <svg className="w-6 h-6 text-[#c59a6d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -182,11 +197,11 @@ const VideoSection = () => {
               </svg>
             </div>
             <p className="italic font-medium text-[#8a6b40] leading-relaxed pr-4">
-              "Great design is not just about aesthetics—it's about creating spaces that enhance your daily life 
+              "Great design is not just about aesthetics—it's about creating spaces that enhance your daily life
               and bring joy to every moment you spend at home."
             </p>
           </div>
-          
+
           <div className="group relative p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-[#f1e2cf]/50 transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1">
             <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-[#c59a6d]/10 flex items-center justify-center group-hover:bg-[#c59a6d]/20 transition-colors duration-300">
               <svg className="w-6 h-6 text-[#c59a6d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,7 +209,7 @@ const VideoSection = () => {
               </svg>
             </div>
             <p className="leading-relaxed pr-4">
-              From concept to completion, we handle every aspect of your interior design project, 
+              From concept to completion, we handle every aspect of your interior design project,
               delivering exceptional results that exceed expectations and transform your living space.
             </p>
           </div>
