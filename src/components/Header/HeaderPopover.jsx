@@ -28,6 +28,9 @@ const HeaderPopover = () => {
             <a href="/aboutus" className="!text-white font-Urbanist text-base">
               About
             </a>
+            <a href="/landing" className="!text-white font-Urbanist text-base">
+             Interior Solutions
+            </a>
             <div className="flex flex-col gap-1">
               <button
                 type="button"
