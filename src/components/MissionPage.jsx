@@ -7,6 +7,7 @@ import image10 from "../assets/images/image-10.jpeg";
 import image11 from "../assets/images/photo2.jpeg";
 import image5 from "../assets/images/image5.jpg";
 import image6 from "../assets/images/image6.jpg";
+import { useNavigate } from "react-router-dom";
 
 // Enhanced Animation Variants
 const imageVariant = {
@@ -49,6 +50,7 @@ const staggerContainer = {
 };
 
 const MissionPage = () => {
+  const navigate = useNavigate();
   // Shared content data
   const content = {
     label: "Interior Design & Turnkey Execution Studio",
@@ -143,7 +145,7 @@ const MissionPage = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => navigate("/contactus")}
+                onClick={() => navigate("/landing")}
                 className="group self-start mt-4 px-8 py-4 bg-[#9A7B50] text-white font-Urbanist font-semibold text-base md:text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#8A6B40] flex items-center gap-2"
               >
                 Let's Connect
