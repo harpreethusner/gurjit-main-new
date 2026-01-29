@@ -38,7 +38,7 @@ export default function Header() {
           href="/landing"
           className="font-Urbanist text-base text-white transition-colors duration-300"
         >
-          Interior Solutions
+         Consultation
         </a>
         <div
           className="relative"

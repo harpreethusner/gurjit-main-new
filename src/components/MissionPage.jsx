@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star, Award, Building2, Wrench, MapPin, Target } from "lucide-react";
 import image8 from "../assets/images/image8.jpg";
 import image3 from "../assets/images/image3.jpg";
+import image10 from "../assets/images/image-10.jpeg";
+import image11 from "../assets/images/photo2.jpeg";
 import image5 from "../assets/images/image5.jpg";
 import image6 from "../assets/images/image6.jpg";
-import image10 from "../assets/images/image10.jpg";
+
 // Enhanced Animation Variants
 const imageVariant = {
   hidden: { x: -50, opacity: 0, scale: 0.95 },
@@ -164,13 +166,13 @@ const MissionPage = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="w-full lg:w-1/4 max-w-md"
+              className="w-full lg:w-1/3 "
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
                 <img
-                  src={image10}
+                  src={image11}
                   alt="Team member"
-                  className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-[520px] object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
@@ -182,7 +184,7 @@ const MissionPage = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="w-full lg:w-1/3 flex flex-col items-center text-center gap-6 px-3"
+              className="w-full lg:w-1/4 flex flex-col items-center text-center gap-6 px-3"
             >
               <div className="flex items-center justify-center gap-2 mb-0">
                 <span className="block h-[1px] w-12 bg-[#9A7B50]/60" />
@@ -195,9 +197,8 @@ const MissionPage = () => {
                 Who We Are
               </h2>
               <div className="w-40 h-1 bg-gradient-to-r from-transparent via-[#9A7B50] to-transparent" />
-               <p className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed">
-              We work with a limited number of projects at a time to ensure focus, detailing, and accountability.
-
+            <p className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed text-justify">
+  We work with a limited number of projects at a time to ensure focus, detailing, and accountability.
 </p>
               <ul className="text-base md:text-lg text-gray-700 font-Urbanist leading-relaxed mt-1 space-y-2 text-left w-full max-w-md">
                 <li className="flex items-start gap-3">
@@ -229,13 +230,13 @@ const MissionPage = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="w-full lg:w-1/4 max-w-md"
+              className="w-full lg:w-1/3"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
                 <img
-                  src={image8}
+                  src={image10}
                   alt="Team member"
-                  className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-[520px] object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
