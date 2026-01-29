@@ -83,7 +83,7 @@ const MissionPage = () => {
             className="relative w-full max-w-sm flex flex-col min-h-[470px] group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#9A7B50]/20 to-[#9A7B50]/5 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300" />
-            <div className="relative w-full h-full bg-center bg-cover bg-[url('assets/images/1.jpg')] rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative w-full h-full bg-center bg-cover bg-[url('assets/images/bg1.jpg')] rounded-2xl overflow-hidden shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               <div className="relative h-full flex flex-col justify-between p-8">
                 <div className="text-right">

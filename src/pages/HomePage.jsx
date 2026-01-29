@@ -18,7 +18,7 @@ const HomePage = () => {
       <HeroCarousel />
       <MissionPage />
       <VisionPage />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <OurServices />
       <WhyChooseUs />
       <OurGallery />

@@ -174,7 +174,7 @@ export default function HeroCarousel() {
                       >
                         <button
                           className="self-start px-2 py-2 md:px-4 md:py-4 text-xs md:text-lg font-semibold text-white outline-1 outline-[#9A7B50] rounded-md hover:bg-[#9A7B50] font-Urbanist hover:text-white"
-                          onClick={() => navigate("/contactus")}
+                          onClick={() => navigate("/landing")}
                         >
                           Let's Connect
                         </button>
